@@ -1,0 +1,947 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+html
+  overflow-y: scroll
+
+html, body
+  height: 100%
+  width: 100%
+
+body
+  font-family: Arial, sans-serif
+  font-size: 62.5%
+  font-weight: 400
+  color: #444
+
+header
+  position: relative
+
+strong
+  font-weight: 700  
+
+em
+  font-style: italic
+
+a
+  color: #E7AA30
+  &:visited
+    color: #E7AA30
+  &:hover
+    color: #f95951
+
+p
+  margin: 0.5em 0 1.5em 0
+
+h2
+  font-size: 1.8em
+  color: #B35624
+
+h3
+  font-size: 1.6em
+  color: #50AAB2
+
+ul
+  list-style-position: inside
+
+table
+  border: 1px solid #CCC
+  border-collapse: collapse
+  font-size: 1.2em
+  th
+    border: 1px solid #CCC
+    background-color: #EEE
+    font-weight: 700
+    padding: 0.5em 1em
+    span
+      font-weight: 400
+      color: #999
+  td
+    border: 0.1em solid #CCC
+    background-color: #FFF
+    text-align: left
+    padding: 0.5em 1em
+
+nav.main-navigation
+  max-width: 50%
+  min-height: 3em
+  float: right
+  margin: 2.5em 0 1em
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+    display: block
+  li
+    float: left
+    list-style: none
+    margin-left: 1.5em
+    margin-bottom: 1em
+    a
+      display: block
+      color: #B4B4B4
+      font-size: 1.3em
+      font-weight: 700
+      text-decoration: none
+      line-height: 1.8em
+      padding: 0 1.2em
+      border-radius: 1.1em
+      border: 0.1em solid #FFF
+      &:visited
+        display: block
+        text-decoration: none
+      &:hover, &.current
+        color: #555
+        background: #fff
+        -moz-box-shadow: 0px 4px 8px 0px #D4D4D4
+        -webkit-box-shadow: 0px 4px 8px 0px #D4D4D4
+        box-shadow: 0px 4px 8px 0px #D4D4D4
+        border: 0.1em solid #F4F4F4
+        
+nav#signup-navigation
+  clear: both
+  min-height: 5em
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+    display: block
+  li
+    float: left
+    margin: 0
+    width: 50%
+    position: relative
+    list-style: none
+    strong
+      font-size: 1.6em
+      color: #D8D8D8
+      margin-right: 0.5em
+    &.alignRight
+      text-align: right
+    a
+      line-height: 1.5em
+      color: #BBB
+      font-size: 1.6em
+      font-weight: 700
+      text-decoration: none  
+      text-transform: uppercase    
+      &:visited
+        height: 1.5em
+        color: #BBB
+        font-weight: 700
+        text-decoration: none
+      &:hover, &.current
+        color: #333
+
+nav.inner-navigation
+  visibility: hidden
+  width: 16em
+  position: absolute
+  right: 0
+  top: 0
+  font-size: 1.2em
+  background: #FFF
+  -moz-box-shadow: 0px 4px 8px 0px #d4d4d4
+  -webkit-box-shadow: 0px 4px 8px 0px #D4D4D4
+  box-shadow: 0px 4px 8px 0px #D4D4D4
+  border: 0.1em solid #F4F4F4
+  border-radius: 0.8em
+  a
+    text-transform: uppercase
+    cursor: pointer
+    margin: 0.5em
+    padding: 0.5em 1.2em 0.5em 2.4em
+    display: block
+    text-decoration: none
+    color: #FF824C
+    font-weight: 700
+    font-size: 1.2em
+    background: #FFF url(../images/menu-icon.png) no-repeat 0.5em center
+  ul
+    list-style: none    
+    li      
+      font-weight: 700
+      a
+        text-transform: capitalize
+        padding: 0.5em 1.2em 0.5em 3em
+        font-size: 1em
+        display: block
+        text-align: left
+        color: #555
+        text-decoration: none
+        cursor: pointer
+        border-radius: 1em
+        overflow: hidden
+        &.myapps-icon
+          background: #FFF url(../images/myapps-icon.png) no-repeat 0.7em center
+        &.preview-icon
+          background: #FFF url(../images/preview-icon.png) no-repeat 0.7em center
+        &.settings-icon
+          background: #FFF url(../images/cog-icon.png) no-repeat 0.7em center
+        &.services-icon
+          background: #FFF url(../images/services-icon.png) no-repeat 0.7em center
+        &.selected, &:hover          
+          background-color: #BBB
+          color: #FFF
+
+nav#apps-navigation
+  h1
+    float: left
+  a
+    display: block
+    float: left
+    width: 30px
+    height: 30px
+    cursor: pointer
+    &.prev-app
+      background: url(../images/prev-arrow.png) no-repeat center center
+    &.next-app
+      background: url(../images/next-arrow.png) no-repeat center center
+
+nav.services-navigation
+  ul 
+    li
+      list-style: none
+      float: left
+      display: block
+      border: 0.1em solid #CCC
+      margin-right: 0.5em
+      text-align: center
+      font-size: 1.2em
+      a
+        display: block
+        padding: 1em 2em 1em 4em
+        background-color: #FFF
+        color: #333
+        text-decoration: none
+    li.device-detection-nav a
+      background: #FFF url(../images/ddr.png) no-repeat 0.3em center
+      
+    li.device-detection-nav a:hover, li.device-detection-nav a.selected
+      background: #F5F5F5 url(../images/ddr.png) no-repeat 0.3em center  
+      
+    li.image-scaling-nav a
+      background: #FFF url(../images/iss.png) no-repeat 0.3em center
+      
+    li.image-scaling-nav a:hover, li.image-scaling-nav a.selected
+      background: #F5F5F5 url(../images/iss.png) no-repeat 0.3em center
+      
+    li.css-mq-nav a
+      background: #FFF url(../images/cssmq.png) no-repeat 0.3em center
+      
+    li.css-mq-nav a:hover, li.css-mq-nav a.selected
+      background: #F5F5F5 url(../images/cssmq.png) no-repeat 0.3em center
+
+section
+  clear: both
+  width: 100%
+  font-size: 1.2em
+
+section#showcase
+  font-size: 1em
+  border-bottom: none
+  height: 35em
+  padding: 0
+  position: relative
+  background: #84D4DB
+  background: -moz-linear-gradient(top, #69C6CF 0%, #84D4DB 20%, #E6EFF0 80%, #E6EFF0 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69c6cf), color-stop(10%,#84d4db), color-stop(80%,#e6eff0), color-stop(100%,#e6eff0))
+  background: -webkit-linear-gradient(top, #69C6CF 0%, #84D4DB 20%, #E6EFF0 80%, #E6EFF0 100%)
+  background: -o-linear-gradient(top, #69C6CF 0%, #84D4DB 20%, #E6EFF0 80%, #E6EFF0 100%)
+  background: -ms-linear-gradient(top, #69C6CF 0%, #84D4DB 20%, #E6EFF0 80%, #E6EFF0 100%)
+  background: linear-gradient(to bottom, #69C6CF 0%, #84D4DB 20%, #E6EFF0 80%, #E6EFF0 100%)
+  div
+    &#show-inner
+      position: relative
+    &.show-text
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 2
+    &.show-content
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 1
+
+section#become-a-customer
+  font-size: 1em
+
+section#admin-page
+  font-size: 1.3em
+
+.one-column
+  width: 75%
+  margin: 0 auto
+
+#page
+  position: relative
+  clear: both
+
+#signup-form
+  display: none
+
+#sign-up
+  padding: 2.5em
+  background: #f2f2f2
+  background: -moz-linear-gradient(top, #fcfcfc 0%, #e7e7e7 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#e7e7e7))
+  background: -webkit-linear-gradient(top, #fcfcfc 0%,#e7e7e7 100%)
+  background: -o-linear-gradient(top, #fcfcfc 0%,#e7e7e7 100%)
+  background: -ms-linear-gradient(top, #fcfcfc 0%,#e7e7e7 100%)
+  background: linear-gradient(to bottom, #fcfcfc 0%,#e7e7e7 100%)
+  border-radius: 0.8em
+  -moz-box-shadow: 0px 1px 4px 0px #AAA
+  -webkit-box-shadow: 0px 1px 4px 0px #AAA
+  box-shadow: 0px 1px 4px 0px #AAA
+  width: 42em
+  float: right
+  div
+    clear: both
+  h3
+    font-size: 1.5em
+    font-weight: 700
+    margin: 0 0.5em 1em 1.5em
+  input
+    width: 27.3em
+  form
+    font-size: 1.4em
+
+.is-valid
+  background: #FFF url(../images/valid.png) no-repeat center center
+
+#customers
+  float: left
+  width: 46%
+  h3
+    font-size: 3em 
+    line-height: 1.5em
+    color: #aaa
+
+table.pricing-table
+  td
+    text-align: center
+  th.special-column
+    border: 2px solid #333
+    border-bottom: 1px solid #CCC
+  td.special-column
+    border-left: 2px solid #333
+    border-right: 2px solid #333
+    color: #77A71B
+    font-weight: 700
+  td.special-column-last
+    border: 2px solid #333
+    border-top: 1px solid #CCC
+
+#sign-up input
+  &:required:invalid, &:focus:invalid
+    background: #FFF url(../images/invalid.png) no-repeat right center
+  &:required:valid
+    background: #FFF url(../images/valid.png) no-repeat right center
+
+#devices
+  clear: both
+
+#devices table.pricing-table, table.pricing-table 
+  th
+    cursor: pointer
+    text-align: left
+    padding-right: 20px
+    -moz-user-select: none
+    -khtml-user-select: none
+    -webkit-user-select: none
+    -ms-user-select: none
+    user-select: none
+  th.ascending, th.descending, th.sorting
+    background: url(../images/sort-asc.png) no-repeat right center
+    padding-right: 20px
+  th.descending
+    background-image: url(../images/sort-desc.png)
+  th.sorting
+    background-image: url(../images/loading-small.png)
+  td
+    text-align: left
+    padding: 0.25em 1em
+
+#tree-navigation
+  position: relative
+  float: left
+  width: 24.5%
+  min-height: 19.5em
+  margin-right: 3%
+  margin-bottom: 2em
+  overflow: auto
+  background: #FFF
+  border: 0.1em solid #CCC
+  padding: 1%
+  line-height: 1.5em
+  border-radius: 0.4em
+  .devices-root
+    cursor: pointer
+  ul
+    li
+      list-style: none
+      &.node-expanded
+        background: url(../images/collapse.png) no-repeat -4px -7px
+      &.node-collapsed
+        background: url(../images/expand.png) no-repeat -4px -7px
+    li a
+      cursor: pointer
+      margin-left: 0.5em
+      &.actual-device
+        padding-right: 40px
+        background: url(../images/device.png) no-repeat right center
+    li img
+      cursor: pointer
+    ul
+      margin-left: 24px
+
+.table-of-devices
+  float: left
+  overflow: auto
+  font-size: 0.9em
+  width: 70%
+  min-height: 24em
+  background: #f5f5f5
+  margin-bottom: 2em
+  table
+    width: 100%
+
+#selected-devices, #selected-capabilities
+  margin-bottom: 1em
+  div
+    max-height: 14em
+    overflow-y: auto
+  span
+    background: #EEE
+    padding: 0 2em 0 0.5em
+    border: 1px solid #CCC
+    margin: 0.25em 0.5em 0.25em 0
+    line-height: 2em
+    display: inline-block
+    border-radius: 3px
+    font-size: 0.95em
+    &:hover
+      background: #FFF url(../images/delete-small.png) no-repeat center right
+      border: 1px solid #ff3d3d
+      cursor: pointer
+
+#selected-capabilities
+  div.save-custom-capability
+    overflow-y: visible
+    text-align: right
+    a
+      padding: 0 1em
+  margin-bottom: 0
+  font-size: 1em
+
+#page #sign-up input.form-btn
+  width: 21.1em
+  font-size: 1.4em
+  font-weight: 400
+  border-radius: 0.2em
+  background: #50AAB2
+  background: -moz-linear-gradient(top, #5db2ba 0%, #459fa8 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5db2ba), color-stop(100%,#459fa8))
+  background: -webkit-linear-gradient(top, #5db2ba 0%,#459fa8 100%)
+  background: -o-linear-gradient(top, #5db2ba 0%,#459fa8 100%)
+  background: -ms-linear-gradient(top, #5db2ba 0%,#459fa8 100%)
+  background: linear-gradient(to bottom, #5db2ba 0%,#459fa8 100%)
+  -moz-box-shadow: 0px 0px 0px 1px #4BA3AA, 0px 0px 0px 1px #93D0D5 inset, 0px 3px 0px 0px #FFF
+  -webkit-box-shadow: 0px 1px 0px 0px #B3E0E4 inset, 0px 0px 0px 1px #30868D, 0px 3px 0px 0px #FFF
+  box-shadow: 0px 1px 0px 0px #B3E0E4 inset, 0px 0px 0px 1px #30868D, 0px 3px 0px 0px #FFF
+  &:hover
+    background: #5db2ba
+    background: -moz-linear-gradient(top, #459fa8 0%, #5db2ba 100%)
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#459fa8), color-stop(100%,#5db2ba))
+    background: -webkit-linear-gradient(top, #459fa8 0%,#5db2ba 100%)
+    background: -o-linear-gradient(top, #459fa8 0%,#5db2ba 100%)
+    background: -ms-linear-gradient(top, #459fa8 0%,#5db2ba 100%)
+    background: linear-gradient(to bottom, #459fa8 0%,#5db2ba 100%)
+
+.pagination
+  clear: both
+  float: left
+  width: 100%
+  padding: 2em 0
+  a
+    padding: 0.1em 1.4em
+    margin: 0 0.4em 0 0
+    text-decoration: none
+    color: #333
+    background-color: #EEE
+    border: 1px solid #AAA
+
+footer
+  clear: both
+  float: left
+  width: 100%
+  border-top: 0.1em solid #e0e0e0
+  p
+    color: #999
+    margin: 0.5em 0
+    font-size: 1.1em
+    text-align: center
+
+hr
+  border: none
+  border-bottom: 1px solid #E4E4E4
+
+nav.account-navigation
+  color: #333
+  display: none
+  float: right
+  margin: 0 1.2em 0 0
+  clear: right
+  font-size: 1.3em
+  .user-logo
+    margin-right: 0.5em
+  
+.app-details
+  div
+    margin-bottom: 0.7em
+  #app-name
+    color: #77A71B
+
+#custom-capability-value, #new-capability-set
+  h1
+    margin-top: 1em
+    float: left
+  div.save-custom-capability
+    font-size: 1.1em
+    margin-top: 1.2em
+    float: left
+    margin-left: 2em 
+    a.form-btn
+      display: block
+      float: left
+
+#all-capabilities
+  ul li 
+    list-style: none
+    float: left
+    width: 30%
+    margin-right: 3%
+    cursor: pointer
+    border-bottom: 1px solid #ddd
+    margin-bottom: 0.25em
+    padding: 0.25em 0
+    overflow: hidden
+    &:hover
+      background-color: #0190A4
+      color: #FFF
+
+#list-all-capabilities
+  table
+    width: 100%
+    border-collapse: separate
+    th
+      text-align: left
+      border: none
+      border-bottom: 1px solid #CCC
+      background: #F2F2F2
+      &.last-column
+        width: 9em
+    td 
+      text-align: left
+      padding: 0.5em 1em
+      border: none
+      border-bottom: 1px solid #ccc
+      input
+        width: 90%
+        margin: 0
+      a.form-btn
+        margin: 0 0.5em
+        padding: 0.2em 0.5em
+        font-size: 0.9em
+        border-radius: 0.2em
+        margin-right: 0
+      div.capability-name
+        display: inline-block
+        font-size: 1.2em
+        font-weight: 700
+        cursor: pointer
+        margin-right: 1em
+      div.delete-capability        
+        margin: 0.5em 0
+        a.form-btn
+          margin-left: 0
+      &.node-expanded
+        padding-left: 32px
+        background: #F5F5F5 url(../images/collapse.png) no-repeat left top
+      &.node-collapsed
+        padding-left: 32px
+        background: #F5F5F5 url(../images/expand.png) no-repeat left top
+    &.capability-values
+      font-size: 1em
+      td
+        border: none
+        input
+          width: 60%
+        span
+          margin-left: 0.5em
+        &.last-column
+          width: 30%
+        
+
+#filter-devices-form
+  ul li input
+    width: 92%
+    padding: 0 4%
+
+.label-text
+  color: #0190A4
+  line-height: 1.5em
+  font-style: italic
+
+.value-text
+  line-height: 1.5em
+
+.app-debugging a
+  padding: 0.1em 0.4em
+  color: #ccc
+  font-weight: 700
+  font-size: 0.9em
+  line-height: 0.9em
+  cursor: pointer
+  border: 1px solid #ccc
+  background: #FFF
+  &:hover
+    color: #555
+  &#first
+    border-radius: 0.4em 0 0 0.4em
+    border-right: none
+  &#last
+    border-radius: 0 0.4em 0.4em 0
+    border-left: none
+  &.selected
+    cursor: default
+    color: #FFF
+    background: #666
+    border: 1px solid #666
+    &:hover
+      color: #FFF
+
+.section-filter
+  margin-top: 2em
+  text-align: center
+  padding: 0.5em 0
+  border-radius: 0.4em
+  background: #f2f2f2
+  background: -moz-linear-gradient(top, #f5f5f5, #eeeeee 100%)
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#eeeeee))
+  -moz-box-shadow: 0px 1px 2px #aaa
+  -webkit-box-shadow: 0px 1px 2px #aaa
+  box-shadow: 0px 1px 2px #aaa
+  .cyan-page-button
+    margin-right: 1%
+
+#assign-devices .section-filter
+  margin-top: 1em
+  font-size: 0.9em
+  ul li
+    list-style: none
+    float: left
+    text-align: left
+    position: relative
+    width: 48%
+    margin: 0 1%
+
+#pagination
+  font-weight: 700
+  color: #AAA
+  hr
+    width: 12em
+  div
+    text-align: center
+    a
+      cursor: pointer
+      color: #AAA
+      padding: 0.2em
+      margin: 0.2em
+      line-height: 2em
+  div#pages
+    margin-top: 0.5em
+    a
+      background: #f2f2f2
+      background: -moz-linear-gradient(top, #f5f5f5, #eeeeee 100%)
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#eeeeee))
+      margin: 0
+      padding: 0.4em 1em      
+      border-left: 1px solid #FFF
+      border-right: 1px solid #DDD
+      border-top: 1px solid #EEE
+      border-bottom: 1px solid #DDD
+      &:hover
+        background: #f7f7f7
+        color: #333
+    a.current-page
+      color: #444
+      background: #f7f7f7
+    a.disabled
+      color: #DDD
+      cursor: default
+      &:hover
+        background: #f2f2f2
+        background: -moz-linear-gradient(top, #f5f5f5, #eeeeee 100%)
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#eeeeee))
+        color: #DDD
+    a#first
+      border-radius: 0.5em 0 0 0.5em
+      border-left: 1px solid #EEE  
+    a#last
+      border-radius: 0 0.5em 0.5em 0                 
+
+#admin-page input, #admin-page textarea, #page input, #page textarea
+  font-family: Arial, sans-serif
+  font-size: 1em
+  line-height: 1.2em
+  margin: 0.3em 0 0.6em 0
+  border: 1px solid #d1d1d1
+  border-radius: 0.2em
+  padding: 0 0.5em
+
+#admin-page input[type="radio"], #admin-page input[type="checkbox"], #page input[type="radio"], #page input[type="checkbox"]
+  padding: 0
+  border: none
+
+#admin-page input, #admin-page textarea
+  width: 18em  
+
+.page-btn, a.page-btn
+  color: #FFF
+  font-weight: 700
+  text-decoration: none
+  background-color: #bbb
+  border: none
+  cursor: pointer
+  padding: 0.2em 0.8em
+  border-radius: 2em
+  &:hover
+    color: #FFF
+    background-color: #b35624
+
+.action-btn, a.action-btn
+  color: #FFF
+  font-weight: 700
+  text-decoration: none
+  background-color: #77a71b
+  border: none
+  cursor: pointer
+  padding: 0.2em 2em
+  border-radius: 2em
+  &:hover
+    color: #FFF
+    background-color: #94c634
+
+.form-btn, a.form-btn, #admin-page input.form-btn, #page input.form-btn
+  color: #FFF
+  font-weight: 700
+  text-decoration: none
+  background-color: #AAA
+  border: none
+  cursor: pointer
+  padding: 0.5em 0.8em
+  border-radius: 2em
+  margin-top: 0.5em
+  font-size: 1em
+  &:hover
+    color: #FFF
+    background-color: #b35624
+
+#admin-page .section-filter input
+  width: auto
+
+.text-center
+  text-align: center
+
+#resources-list
+  padding-bottom: 3em
+  div.repo
+    padding: 1em 0 1em 5.5em
+    border-top: 1px solid #eaeaea
+    background-image: url(../images/gitIcon.png)
+    background-position: 0 0.5em
+    background-repeat: no-repeat
+    div.description
+      line-height: 1.5em
+    div.timestamp
+      color: #999
+      font-style: oblique
+      line-height: 1.5em
+
+.m-background, .full-bg
+  height: 140%
+  width: 100%
+  position: fixed
+  z-index: 3800
+  top: 0
+  left: 0
+  background-color: #fff
+  filter: alpha(opacity=80)
+  -moz-opacity: 0.8
+  opacity: 0.8
+
+.full-bg
+  background-color: #555
+  filter: alpha(opacity=100)
+  -moz-opacity: 1
+  opacity: 1
+
+.m-container
+  position: fixed
+  z-index: 3801
+  top: 50%
+  left: 50%
+  font-size: 1.2em
+  border-radius: 0.3em
+  -moz-box-shadow: 0px 4px 20px #bbb
+  -webkit-box-shadow: 0px 4px 20px #bbb
+  box-shadow: 0px 4px 20px #bbb
+  background-color: #FFF
+  div
+    padding: 1em
+  div.element-actions
+    a.page-btn
+      display: block
+      font-size: 1em
+      color: #555
+      background: #FFF
+      -moz-box-shadow: 0px 1px 4px 0px #999
+      -webkit-box-shadow: 0px 1px 4px 0px #999
+      box-shadow: 0px 1px 4px 0px #999
+      text-align: center
+      border: none
+      line-height: 1.5em
+      padding: 0.5em 1em
+      margin: 1em 0
+      text-transform: capitalize
+  div.m-header
+    border-bottom: 1px solid #4e4e4e
+    background: #7b7b7b
+    background: linear-gradient(top, #8b8b8b 0%, #6b6b6b 85%)
+    background: -o-linear-gradient(top, #8b8b8b 0%, #6b6b6b 85%)
+    background: -moz-linear-gradient(top, #8b8b8b 0%, #6b6b6b 85%)
+    background: -webkit-linear-gradient(top, #8b8b8b 0%, #6b6b6b 85%)
+    background: -ms-linear-gradient(top, #8b8b8b 0%, #6b6b6b 85%)
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8b8b8b), color-stop(0.85, #6b6b6b))
+    color: #fff
+    text-align: center
+    padding: 3% 2%
+    border-radius: 0.3em 0.3em 0 0
+  div.m-header-title
+    padding: 0
+    font-size: 1.2em
+  div.m-footer
+    padding: 0 1em 1em
+    text-align: right
+  div.m-footer .form-btn
+    font-size: 1.1em
+    color: #FFF
+    background: #1DB2BF
+    border: 1px solid #0F8191
+    line-height: 1.8em
+    padding: 0 1.2em
+    margin: 0 0 0 0.5em
+    text-transform: capitalize
+    border-radius: 0.2em
+    font-weight: 400
+  div.m-error
+    color: #fff
+    font-size: 1.2em
+    background: #f12727
+  div.m-content
+    font-size: 1.2em
+    line-height: 1.2em
+    input
+      width: 94%
+      font-family: Arial, sans-serif
+      line-height: 1.2em
+      padding: 1% 3%
+      font-size: 1em
+      border: 1px solid #D1D1D1
+      border-radius: 0.2em
+      color: #333
+      -webkit-user-modify: read-write-plaintext-only
+
+.m-actions
+  background: none
+  box-shadow: none
+  font-size: 1em
+  div.element-actions
+    a.page-btn
+      -moz-box-shadow: 0px 4px 8px 0px #333
+      -webkit-box-shadow: 0px 4px 8px 0px #333
+      box-shadow: 0px 4px 8px 0px #333
+      border: none
+      padding: 0.5em 1.5em
+      margin: 1em 0
+      clear: both
+      font-size: 1.2em
+    a.m-close
+      display: block
+      background-color: #333
+      color: white
+      font-size: 1.2em
+      line-height: 1em
+      font-weight: 700
+      text-align: center
+      width: 2em
+      height: 1.2em
+      float: right
+      border-radius: 0.4em
+      padding: 0.2em 0
+      margin-bottom: 1em
+      cursor: pointer
+    a.cyan-page-button-big
+      margin: 0.5em 0 0
+      font-size: 1.2em
+
+#git-setup
+  display: none
+  textarea
+    margin: 0.5em 0 1em 0
+    width: 15.3em
+    font-size: 1em
+  
+.local-settings-panel
+  .value-text
+    display: inline-block
+    float: right
+  width: 18em
+  text-align: left
+  background-color: #FFF
+  -moz-box-shadow: 0px 4px 8px 0px #E4E4E4
+  -webkit-box-shadow: 0px 4px 8px 0px #E4E4E4
+  box-shadow: 0px 4px 8px 0px #E4E4E4
+  padding: 1em
+  margin: 1em 0
+  border: 1px solid #DDD
+  border-radius: 0.5em
+  
+.submenu-nav
+  padding: 1em 0 0.5em 0
+
+.unselectable
+  -moz-user-select: none
+  -khtml-user-select: none
+  -webkit-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.product-features
+  margin: 3em 0
+  ul
+    list-style: none
+    li
+      float: left
+      width: 16%
+      margin-right: 3%
