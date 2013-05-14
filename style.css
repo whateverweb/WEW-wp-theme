@@ -420,7 +420,7 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	font-size: 1.05em;
 }
 
-.post-thumb ol, .post-thumb ul {
+.post.thumb ol, .post.thumb ul {
 	margin-left: 4em;
 	font-size: 1.5em;
 }
