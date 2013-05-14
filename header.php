@@ -33,17 +33,33 @@
     	<div class="page-wrapper">           
 			<header>            	
                 <div id="top-bar">
-                    <div class="master-width clearfix">                       
-                        <div id="admin-menu">
-	                        <a title="Go to Administration" id="admin-menu-trigger">Admin</a>   
-							<?php wp_nav_menu( array('menu' => 'Admin Menu', 'container' => 'nav', 'container_id' => 'links-menu', 'menu_class' => '' )); ?>
+                    <div class="master-width clearfix">                        
+                        <div id="admin-menu" style="display: block;">
+	                        <a title="Go to Administration" id="admin-menu-trigger">Admin</a>                        
+		                	<nav id="links-menu">
+		                        <ul>
+		                            <li class="first"><a href="http://whateverweb.com/myApplications.html">Dashboard</a></li> 
+		                            <li><a href="http://whateverweb.com/securitySettings.html">My Account</a></li>    
+		                            <li><a href="http://whateverweb.com/statisticsQuotaAccount.html">Account Statistics</a></li>    
+		                            <li class="last"><a onclick="myGuardian.logout(); return false;">Logout</a></li>                
+		                        </ul>
+		                    </nav>
 		                </div>
 		                <div id="web-menu">
-		                    <a title="Page Menu" id="web-menu-trigger">&equiv;</a>
-							<?php wp_nav_menu( array('menu' => 'Main Menu', 'container' => 'nav', 'container_id' => 'main-menu', 'menu_class' => '' )); ?>	                        
+		                    <a title="Page Menu" id="web-menu-trigger">≡</a>
+	                        <nav id="main-menu">
+	                            <ul>
+	                            	<li class="first"><a href="http://whateverweb.com/about.html">About</a></li>
+	                            	<li><a href="http://whateverweb.com/getting_started.html">Getting Started</a></li>	                            	
+	                            	<li><a href="http://whateverweb.com/pricing.html">Pricing</a></li>
+	                                <li><a class="current" href="http://docs.whateverweb.com/">Blog</a></li>
+                                    <li class="last"><a href="http://whateverweb.com/documentation.html">Documentation</a></li>
+	                            </ul>
+	                        </nav>
                         </div>
-                         <h1 class="logo"><a title="WhateverWeb.com" href="http://www.whateverweb.com">WhateverWeb</a><span>Beta</span></h1>
+                         <h1 class="logo"><a title="WhateverWeb.com" href="http://whateverweb.com/">WhateverWeb</a><span>Beta</span></h1>
                     </div>
+                    <div class="clear"></div>
                 </div>
                 <div id="top-stripe-small">
                     <div class="master-width clouds-city"></div>

@@ -14,12 +14,6 @@
             <h3>WhateverWeb <span>Let&rsquo;s bring web into the future</span></h3>									
             <p>Copyright &copy; 2013-2014 WhateverWeb.com<br />Brought to you by Mobiletech</p>
         </footer>
-        
-        <script src="http://whateverweb.com/scripts/whatever.config.js"></script>
-		<script src="http://whateverweb.com/widgets/js/ajax.js"></script>
-		<script src="http://whateverweb.com/widgets/js/modalview.js"></script>
-		<script src="http://whateverweb.com/scripts/guardian.js"></script>
-		<script src="http://whateverweb.com/scripts/animateMenu.js"></script>	
 		
 		<script>
 		  var _gaq = _gaq || [];
