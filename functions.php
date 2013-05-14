@@ -22,6 +22,23 @@
  * @since Twenty Twelve 1.0
  */
 
+function CustomSearch($query) {
+	if ($query->is_search) {
+		$query->set('post_type', 'page');
+	}
+	return $query;
+}
+
+add_filter('pre_get_posts','CustomSearch');
+
+function my_request_filter( $query_vars ) {
+    if( isset( $_GET['s'] ) && empty( $_GET['s'] ) ) {
+        $query_vars['s'] = " ";
+    }
+    return $query_vars;
+}
+add_filter( 'request', 'my_request_filter' );
+
 /**
  * Sets up the content width value based on the theme's design and stylesheet.
  */
@@ -49,7 +66,7 @@ function twentytwelve_setup() {
 	 * If you're building a theme based on Twenty Twelve, use a find and replace
 	 * to change 'twentytwelve' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'twentytwelve', get_template_directory() . '/languages' );
+	//load_theme_textdomain( 'twentytwelve', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
@@ -61,14 +78,7 @@ function twentytwelve_setup() {
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'link', 'quote', 'status' ) );
 
 	// This theme uses wp_nav_menu() in one location.
-	//register_nav_menu( 'primary', __( 'Primary Menu', 'twentytwelve' ) );
-	
-	register_nav_menus(
-		array(
-			 'primary'=> 'Primary Menu' ,
-			 'secondary'=>'Secndary Menu' 
-
-			));
+	register_nav_menu( 'primary', __( 'Primary Menu', 'twentytwelve' ) );
 
 	/*
 	 * This theme supports custom background color and image, and here
@@ -87,6 +97,7 @@ add_action( 'after_setup_theme', 'twentytwelve_setup' );
 /**
  * Adds support for a custom header image.
  */
+require( get_template_directory() . '/inc/custom-header.php' );
 
 /**
  * Enqueues scripts and styles for front-end.
@@ -142,19 +153,19 @@ function twentytwelve_scripts_styles() {
 			'family' => 'Open+Sans:400italic,700italic,400,700',
 			'subset' => $subsets,
 		);
-		//wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
+		wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
 	}
 
 	/*
 	 * Loads our main stylesheet.
 	 */
-	//wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() );
 
 	/*
 	 * Loads the Internet Explorer specific stylesheet.
 	 */
-	//wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentytwelve-style' ), '20121010' );
-	//$wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
+	wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentytwelve-style' ), '20121010' );
+	$wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
 
@@ -209,57 +220,49 @@ add_filter( 'wp_page_menu_args', 'twentytwelve_page_menu_args' );
  */
 function twentytwelve_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Sidebar for blog posts', 'twentytwelve' ),
+		'name' => __( 'Blog Sidebar' ),
 		'id' => 'sidebar-1',
-		'description' => __( 'Appears on blog', 'twentytwelve' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
+		'description' => __( 'Appears on blog posts and pages' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Sidebar for Pages', 'twentytwelve' ),
+		'name' => __( 'Docs Sidebar' ),
 		'id' => 'sidebar-2',
-		'description' => __( 'Appears on pages', 'twentytwelve' ),
+		'description' => __( 'Appears on documentation pages' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Sidebar on frontpage', 'twentytwelve' ),
-		'id' => 'sidebar-3',
-		'description' => __( 'Appears on frontpage of blog', 'twentytwelve' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
 
-if ( ! function_exists( 'twentytwelve_content_nav' ) ) :
+if ( ! function_exists( 'whateverweb_list_nav' ) ) :
 /**
  * Displays navigation to next/previous pages when applicable.
- *
- * @since Twenty Twelve 1.0
  */
-function twentytwelve_content_nav( $html_id ) {
+function whateverweb_list_nav( $html_id ) {
 	global $wp_query;
-
 	$html_id = esc_attr( $html_id );
-
 	if ( $wp_query->max_num_pages > 1 ) : ?>
-		<nav id="<?php echo $html_id; ?>" class="navigation" role="navigation">
-			<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
-			<div class="nav-previous alignleft"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentytwelve' ) ); ?></div>
-			<div class="nav-next alignright"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></div>
-		</nav><!-- #<?php echo $html_id; ?> .navigation -->
+		<nav id="<?php echo $html_id; ?>" role="navigation">			
+			<div class="prev-post"><?php next_posts_link('Older Posts', 0); ?></div>
+			<div class="next-post"><?php previous_posts_link('Newer Posts', 0); ?></div>
+		</nav>
 	<?php endif;
 }
 endif;
+
+//function to replace invalid ellipsis with text linking to the post
+function cool_excerpt($text)
+{
+   return str_replace('[...]', '... <a href="'. get_permalink($post->ID) . '">' . 'read more' . '</a>', $text);
+}
+add_filter('the_excerpt', 'cool_excerpt');
 
 if ( ! function_exists( 'twentytwelve_comment' ) ) :
 /**
