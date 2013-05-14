@@ -112,7 +112,7 @@ h4, h4 a, h4 a:visited, h4 a:hover {
 }
 
 .master-width.vspace p {
-	margin: 1em 0;
+	margin: 0 0 2em;
 	font-size: 1.5em;
 	line-height: 1.5em;
 }
@@ -423,6 +423,11 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 .post.thumb ol, .post.thumb ul {
 	margin-left: 4em;
 	font-size: 1.5em;
+	margin-bottom: 2em;
+}
+
+.post.thumb ol li, .post.thumb ul li {
+	margin-bottom: .5em;
 }
 
 .docs-page .right-side ol, .docs-page .right-side ul {
@@ -440,7 +445,9 @@ table td, table th {
 }
 
 table th {
-	font-weight: 700;
+	background: #F5F5F5;
+	color: #555;
+	text-align: left;
 }
 
 #docs-sidebar {
@@ -475,19 +482,13 @@ table th {
 #docs-sidebar ul li {
 	list-style: none;
 	line-height: 2em;
-	border-bottom: 1px solid #E7E7E7;
 	overflow: hidden;
-	margin: 0 2em;
+	margin: 0 1em;
 }
 
 footer, .clear-footer, .clear-content {
 	clear: both;	
 	height: 200px;
-}
-
-
-.clear-content {
-	height: 6em;
 }
 
 .clearfix:after { 
@@ -774,6 +775,12 @@ a.tooltip-anchor:hover {
 	color: #BBB;
 	margin: 0 0 1em;
 	font-size: 1.5em;
+}
+
+.post-date {
+	font-style: italic;
+	position: relative;
+	top: -0.3em;
 }
 
 .post-comments {
