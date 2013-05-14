@@ -18,7 +18,7 @@
                     <a class="footer-twitter" href="https://twitter.com/WhatEverWeb" target="_blank">Twitter</a>
                 </div>
                 <h3>WhateverWeb <span>Let&rsquo;s bring web into the future</span></h3>
-                <p class="footer-menu"><a href="http://whateverweb.com/about.html" class="first">About</a><a href="http://whateverweb.com/getting_started.html">Getting Started</a><a href="http://whateverweb.com/documentation.html">Documentation</a><a class="last" href="mailto:team@whateverweb.com">Support</a><a class="last" href="http://blog.whateverweb.com/">Blog</a></p>
+                <p class="footer-menu"><a href="http://whateverweb.com/about.html" class="first">About</a><a href="http://whateverweb.com/getting_started.html">Getting Started</a><a href="http://whateverweb.com/documentation.html">Documentation</a><a class="last" href="mailto:team@whateverweb.com">Support</a><a class="last" href="http://docs.whateverweb.com/">Blog</a></p>
                 <p class="footer-menu"><a href="http://whateverweb.com/terms.html" class="first">Terms of Service</a><a href="http://whateverweb.com/privacy.html" class="last">Privacy Policy</a>
                 <p>Copyright © 2013-<?php echo date("Y");?> WhateverWeb.com<br />Brought to you by Mobiletech</p>                
             </div>
