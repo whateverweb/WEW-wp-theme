@@ -463,3 +463,4 @@ function custom_upload_mimes ( $existing_mimes=array() ) {
 	$existing_mimes['svgz'] = 'image/svg+xml';
 	return $existing_mimes;
 }
+add_filter('upload_mimes', 'custom_upload_mimes');
