@@ -83,7 +83,7 @@ h4, h4 a, h4 a:visited, h4 a:hover {
 }
 
 .docs-section {
-	background: #f0f0f0;
+	background: #ECECEC;
 }
 
 .page-wrapper.docs-page {
@@ -391,23 +391,23 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	min-height: 30em;
-	padding: 1em;
+	padding: 1em 2em;
 	font-size: 1.6em;
 	line-height: 1.5em;
 }
 
 .docs-page .right-side h1 {
-	line-height: 1.5em;
-	font-size: 1.6em;
+	line-height: 1.3em;
+	font-size: 1.5em;
 }
 
 .docs-page .right-side h2 {
 	margin: .5em 0;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 .docs-page .right-side h3 {
-	font-size: 1.05em;
+	font-size: 1em;
 	font-weight: 700;
 	margin: 0 0 .5em;
 }
@@ -417,7 +417,7 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 }
 
 .docs-page .right-side a{
-	font-size: 1.05em;
+	font-size: 1em;
 }
 
 .post.thumb ol, .post.thumb ul {
@@ -456,7 +456,7 @@ table th {
 	background: #FFF;
 	border-radius: 4px;
 	padding: 1em 0;
-	border: 1px solid #ddd;
+	border: 1px solid #D5D5D5;
 }
 
 #docs-sidebar a, #docs-sidebar a:visited {
