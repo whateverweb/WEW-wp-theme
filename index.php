@@ -14,7 +14,7 @@ get_header(); ?>
 			<?php whateverweb_list_nav('post-nav'); ?>
 
 		<?php else : ?>
-			<h3><?php echo 'Apologies, but have no recent news to post.'; ?></h3>
+			<p><strong><?php echo 'Apologies, we have no recent news to post.'; ?></strong></p>
 		<?php endif; ?>
 	</div>
 	

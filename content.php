@@ -6,10 +6,10 @@
 <div class="post <?php if ( is_single() ) : ?> thumb<?php endif; ?>">
 	<div class="post-title">		
 		<?php if ( is_single() ) : ?>
-			<div class="post-author">
-				<?php //the_post_thumbnail(); ?>
-				<?php echo get_avatar( get_the_author_meta('user_email'), $size = '50', $default = '', $alt = 'author'); ?>
-			</div>
+			<!--<div class="post-author">
+				<?php /*?><?php //the_post_thumbnail(); ?>
+				<?php echo get_avatar( get_the_author_meta('user_email'), $size = '50', $default = '', $alt = 'author'); ?><?php */?>
+			</div>-->
 			<h1><?php the_title(); ?></h1>
 		<?php else : ?>
 			<h1><a href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>"><?php the_title(); ?></a></h1>
