@@ -87,14 +87,14 @@ h4, h4 a, h4 a:visited, h4 a:hover {
 }
 
 .page-wrapper.docs-page {
-	margin: 0 auto -140px;
+	margin: 0 auto -100px;
 }
 
 .docs-page #top-bar {
 	padding: 1em 3em;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #d1d1d1;
 }
 
 #page {
@@ -452,7 +452,7 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	background: #FFF;
 	border-radius: 4px;
 	padding: 1em 2em;
-	border: 1px solid #D5D5D5;
+	border: 1px solid #d1d1d1;
 }
 
 table {
@@ -477,7 +477,7 @@ table th {
 	background: #FFF;
 	border-radius: 4px;
 	padding: 1em 0;
-	border: 1px solid #D5D5D5;
+	border: 1px solid #d1d1d1;
 }
 
 #docs-sidebar a, #docs-sidebar a:visited {
@@ -554,13 +554,17 @@ footer.docs-page {
 	padding: 0 3em;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	height:140px;
-	border-top: 1px solid #ddd;
-	background: #EFEFEF;
+	height: 100px;
+	border-top: 1px solid #D1D1D1;
+	background: #F7F7F7;
 }
 
 footer.docs-page h3 {
-	margin-top: 1em;
+	margin: 1em 0 .5em;
+}
+
+footer.docs-page p {
+	font-style: italic;
 }
 
 footer div.master-width {
@@ -908,7 +912,7 @@ a.tooltip-anchor:hover {
 }
 
 .docs-page .clear-footer {
-	height: 140px;
+	height: 100px;
 }
 
 .widget_search div {
