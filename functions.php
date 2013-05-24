@@ -272,7 +272,7 @@ function improved_trim_excerpt($text) {
 			$text = apply_filters('the_content', $text);
 			$text = str_replace('\]\]\>', ']]&gt;', $text);
 			$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-			$text = strip_tags($text, '<p> <h1> <h2> <h3> <h4> <div> <br>');
+			$text = strip_tags($text, '<p><h1><h2><h3><h4><div><br><strong><em><a><code><pre>');
 			$excerpt_length = 90;
 			$words = explode(' ', $text, $excerpt_length + 1);
 			if (count($words)> $excerpt_length) {
