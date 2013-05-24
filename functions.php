@@ -264,11 +264,28 @@ function cool_excerpt($text)
 }
 add_filter('the_excerpt', 'cool_excerpt');
 
-// custom excerpt
-function custom_excerpt_length( $length ) {
-	return 100;
+// wew custom excerpt 
+function improved_trim_excerpt($text) {
+	global $post;
+	if ( '' == $text ) {
+			$text = get_the_content('');
+			$text = apply_filters('the_content', $text);
+			$text = str_replace('\]\]\>', ']]&gt;', $text);
+			$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+			$text = strip_tags($text, '<p> <h1> <h2> <h3> <h4> <div> <br>');
+			$excerpt_length = 90;
+			$words = explode(' ', $text, $excerpt_length + 1);
+			if (count($words)> $excerpt_length) {
+					array_pop($words);
+					array_push($words, '[...]');
+					$text = implode(' ', $words);
+			}
+	}
+	return $text;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'improved_trim_excerpt');
+
 
 if ( ! function_exists( 'twentytwelve_comment' ) ) :
 /**
