@@ -13,7 +13,7 @@
                 <a class="footer-blog" href="http://docs.whateverweb.com/">Blog</a>
             </div>
             <h3>WhateverWeb <span>Let&rsquo;s bring web into the future</span></h3>									
-            <p>Copyright &copy; 2013-2014 WhateverWeb.com<br />Brought to you by Mobiletech</p>
+            <p>Copyright &copy; 2013-2014 WhateverWeb.com | Brought to you by Mobiletech</p>
         </footer>
 		
 		<script src="http://whateverweb.com/scripts/whatever.basePackage.js"></script>
