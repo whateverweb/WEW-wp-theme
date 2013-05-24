@@ -4,6 +4,7 @@
  */
 ?>
 		</div><!-- #page -->
+        <div class="clear-footer"></div>
 		</div><!-- .page-wrapper -->
 		<footer class="docs-page">        	
             <div id="footer-social">
