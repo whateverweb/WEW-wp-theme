@@ -1050,6 +1050,14 @@ a.tooltip-anchor:hover {
 		display: block;
 	}
 	
+	.docs-page .left-side, .docs-page .right-side {
+		width: 100%;
+	}
+	
+	.docs-page #docs-sidebar {
+		margin:1em;
+	}
+	
 	nav#main-menu {
 		position: absolute;
 		right: 0;
@@ -1239,6 +1247,11 @@ a.tooltip-anchor:hover {
 		margin-top: 3em;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
+	}
+	
+	.docs-page .right-side {
+		clear:none;
+		margin-top: 0;
 	}
 	
 	footer p.footer-menu {
