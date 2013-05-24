@@ -434,6 +434,23 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	margin-left: 4em;
 }
 
+.docs-page .right-side img {
+	border: 1px solid #BBB;
+	padding: .5em;
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	margin-right: 2em;
+	margin-bottom: 1em;
+	border-radius: 2em;
+	box-shadow: inset 0 0 1em 0 #BBB;
+}
+
+.right-side-columns {
+	max-width: 55em;
+	margin: 0 auto;
+}
+
 table {
 	border-collapse:collapse;
 }
