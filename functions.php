@@ -257,13 +257,6 @@ function whateverweb_list_nav( $html_id ) {
 }
 endif;
 
-//function to replace invalid ellipsis with text linking to the post
-/*function cool_excerpt($text)
-{
-   return str_replace('[...]', '... <a href="'. get_permalink($post->ID) . '">' . 'read more' . '</a>', $text);
-}
-add_filter('the_excerpt', 'cool_excerpt');*/
-
 // wew custom excerpt 
 function improved_trim_excerpt($text)
 {
@@ -284,7 +277,7 @@ function improved_trim_excerpt($text)
         $excerpt_length = apply_filters('excerpt_length', 70);
 
         // Modify excerpt more string at the end from [...] to ...
-        $excerpt_more = apply_filters('excerpt_more', ' ' . '... <a href="'. get_permalink($post->ID) . '">' . 'read more' . '</a>');
+        $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
 
         $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
         if ( count($words) > $excerpt_length ) {
@@ -304,6 +297,12 @@ function improved_trim_excerpt($text)
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'improved_trim_excerpt');
 
+//function to replace invalid ellipsis with text linking to the post
+function cool_excerpt($text)
+{
+   return str_replace('[...]', '... <a href="'. get_permalink($post->ID) . '">' . 'read more' . '</a>', $text);
+}
+add_filter('the_excerpt', 'cool_excerpt');
 
 if ( ! function_exists( 'twentytwelve_comment' ) ) :
 /**
