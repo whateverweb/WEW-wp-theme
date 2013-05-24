@@ -281,10 +281,10 @@ function improved_trim_excerpt($text)
         $text = strip_tags($text, '<p><div><a><strong><h1><h2><h3><h4><code><em><pre><br><ul><li><ol>');
 
         // Set custom excerpt length - number of words to be shown in excerpts
-        $excerpt_length = apply_filters('excerpt_length', 90);
+        $excerpt_length = apply_filters('excerpt_length', 80);
 
         // Modify excerpt more string at the end from [...] to ...
-        $excerpt_more = apply_filters('excerpt_more', ' ' . '...');
+        //$excerpt_more = apply_filters('excerpt_more', ' ' . '...');
 
         $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
         if ( count($words) > $excerpt_length ) {
