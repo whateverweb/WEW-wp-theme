@@ -412,6 +412,10 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	margin: 0 0 .5em;
 }
 
+.docs-page .right-side h4 {
+	font-size: 1em;
+}
+
 .docs-page .right-side p {
 	margin-bottom: 1em;
 }
