@@ -10,7 +10,7 @@ get_template_part('docs-header'); ?>
 </div>
 
 <div class="right-side">
-	<div class="right-side-columns">
+	<div class="right-side-columns clearfix">
 		<?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>

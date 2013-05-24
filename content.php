@@ -18,7 +18,7 @@
 	</div>
 
 	<?php if ( is_search() || is_front_page() ) : ?>
-		<div><?php the_content(); //the_excerpt(); ?></div>
+		<div><?php the_excerpt(); ?></div>
 	<?php else : ?>
 		<div><?php the_content(); ?></div>
 	<?php endif; // is_search() ?>
