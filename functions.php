@@ -278,7 +278,7 @@ function improved_trim_excerpt($text)
         $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
 
         // Enable formatting in excerpts - Add HTML tags that you want to be parsed in excerpts, default is 55
-        $text = strip_tags($text, '<strong><b><em><i><a><code><kbd>');
+        $text = strip_tags($text, '<p><div><a><strong><h1><h2><h3><h4><code><em><pre><br><ul><li><ol>');
 
         // Set custom excerpt length - number of words to be shown in excerpts
         $excerpt_length = apply_filters('excerpt_length', 90);
