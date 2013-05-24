@@ -258,11 +258,11 @@ function whateverweb_list_nav( $html_id ) {
 endif;
 
 //function to replace invalid ellipsis with text linking to the post
-function cool_excerpt($text)
+/*function cool_excerpt($text)
 {
    return str_replace('[...]', '... <a href="'. get_permalink($post->ID) . '">' . 'read more' . '</a>', $text);
 }
-add_filter('the_excerpt', 'cool_excerpt');
+add_filter('the_excerpt', 'cool_excerpt');*/
 
 // wew custom excerpt 
 function improved_trim_excerpt($text)
@@ -278,13 +278,13 @@ function improved_trim_excerpt($text)
         $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
 
         // Enable formatting in excerpts - Add HTML tags that you want to be parsed in excerpts, default is 55
-        $text = strip_tags($text, '<p><div><a><strong><h1><h2><h3><h4><code><em><pre><br><ul><li><ol>');
+        $text = strip_tags($text, '<p><div><a><strong><h1><h2><h3><h4><em>');
 
         // Set custom excerpt length - number of words to be shown in excerpts
         $excerpt_length = apply_filters('excerpt_length', 80);
 
         // Modify excerpt more string at the end from [...] to ...
-        //$excerpt_more = apply_filters('excerpt_more', ' ' . '...');
+        $excerpt_more = apply_filters('excerpt_more', ' ' . '... <a href="'. get_permalink($post->ID) . '">' . 'read more' . '</a>');
 
         $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
         if ( count($words) > $excerpt_length ) {
