@@ -274,7 +274,7 @@ function improved_trim_excerpt($text)
         $text = strip_tags($text, '<a><strong><h1><h2><h3><h4><em>');
 
         // Set custom excerpt length - number of words to be shown in excerpts
-        $excerpt_length = apply_filters('excerpt_length', 70);
+        $excerpt_length = apply_filters('excerpt_length', 80);
 
         // Modify excerpt more string at the end from [...] to ...
         $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
