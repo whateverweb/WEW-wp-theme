@@ -447,8 +447,12 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 }
 
 .right-side-columns {
-	max-width: 55em;
+	max-width: 50em;
 	margin: 0 auto;
+	background: #FFF;
+	border-radius: 4px;
+	padding: 1em 2em;
+	border: 1px solid #D5D5D5;
 }
 
 table {
@@ -553,7 +557,6 @@ footer.docs-page {
 	height:140px;
 	border-top: 1px solid #ddd;
 	background: #EFEFEF;
-	margin-top: 140px;
 }
 
 footer.docs-page h3 {

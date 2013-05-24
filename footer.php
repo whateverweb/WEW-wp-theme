@@ -3,8 +3,8 @@
  * The Footer
  */
 ?>
-		<div class="clear-footer"></div>
 		</div><!-- #page -->
+        <div class="clear-footer"></div>
 		</div><!-- .page-wrapper -->
 		<footer>            
             <div class="master-width">
