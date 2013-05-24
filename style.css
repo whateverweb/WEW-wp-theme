@@ -83,7 +83,7 @@ h4, h4 a, h4 a:visited, h4 a:hover {
 }
 
 .docs-section {
-	background: #EAEAEA;
+	background: #f0f0f0;
 }
 
 .page-wrapper.docs-page {
@@ -439,9 +439,9 @@ table {
 }
 
 table td, table th {
-	border: 1px solid #DDD;
+	border: 1px solid #CCC;
 	padding: .5em;
-	font-size: 1.5em;
+	background: #FFF;
 }
 
 table th {
@@ -460,7 +460,7 @@ table th {
 }
 
 #docs-sidebar a, #docs-sidebar a:visited {
-	color: #E7AA30;
+	color: #333;
 	text-decoration: none;
 	display: block;
 	line-height: 1.8em;
@@ -472,12 +472,7 @@ table th {
 
 #docs-sidebar a:hover {
 	background: #D7F3F3;
-	font-weight: 700;
 	padding-left: 2em;
-}
-
-#docs-sidebar ul li li a:hover {
-	font-weight: 400;
 }
 
 #docs-sidebar ul li {
@@ -488,11 +483,10 @@ table th {
 }
 
 #docs-sidebar ul li a {
-	background: #F1F1F1;
+	background: #F7F7F7;
 	margin-bottom: 2px;
 	padding: .2em 1em;
-	color: #333;
-	border: 1px solid #DDD;
+	border: 1px solid #E4E4E4;
 	border-left: 0;
 	border-right: 0;
 }
@@ -881,8 +875,8 @@ a.tooltip-anchor:hover {
 .docs-page .widget-title {
 	font-size: 1.2em;
 	font-weight: 700;
-	color: #666;
-	margin: .5em 1em .2em;
+	color: #555;
+	margin: .5em .9em .2em;
 }
 
 .simple_tweet_widget {
