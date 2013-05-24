@@ -1052,6 +1052,7 @@ a.tooltip-anchor:hover {
 	
 	.docs-page .left-side, .docs-page .right-side {
 		width: 100%;
+		margin-top:0;
 	}
 	
 	.docs-page #docs-sidebar {
