@@ -265,23 +265,41 @@ function cool_excerpt($text)
 add_filter('the_excerpt', 'cool_excerpt');
 
 // wew custom excerpt 
-function improved_trim_excerpt($text) {
-	global $post;
-	if ( '' == $text ) {
-			$text = get_the_content('');
-			$text = apply_filters('the_content', $text);
-			$text = str_replace('\]\]\>', ']]&gt;', $text);
-			$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-			$text = strip_tags($text, '<p><h1><h2><h3><h4><div><br><strong><em><a><code><pre>');
-			$excerpt_length = 90;
-			$words = explode(' ', $text, $excerpt_length + 1);
-			if (count($words)> $excerpt_length) {
-					array_pop($words);
-					array_push($words, '[...]');
-					$text = implode(' ', $words);
-			}
-	}
-	return $text;
+function improved_trim_excerpt($text)
+{
+    $raw_excerpt = $text;
+    if ( '' == $text ) {
+        $text = get_the_content('');
+        $text = strip_shortcodes( $text );
+        $text = apply_filters('the_content', $text);
+        $text = str_replace(']]>', ']]&gt;', $text);
+
+        // Removes any JavaScript in posts
+        $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+
+        // Enable formatting in excerpts - Add HTML tags that you want to be parsed in excerpts, default is 55
+        $text = strip_tags($text, '<strong><b><em><i><a><code><kbd>');
+
+        // Set custom excerpt length - number of words to be shown in excerpts
+        $excerpt_length = apply_filters('excerpt_length', 90);
+
+        // Modify excerpt more string at the end from [...] to ...
+        $excerpt_more = apply_filters('excerpt_more', ' ' . '...');
+
+        $words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+        if ( count($words) > $excerpt_length ) {
+            array_pop($words);
+            $text = implode(' ', $words);
+
+            // IMPORTANT! Prevents tags cutoff by excerpt (i.e. unclosed tags) from breaking formatting
+            $text = force_balance_tags( $text );
+
+            $text = $text . $excerpt_more;
+        } else {
+            $text = implode(' ', $words);
+        }
+    }
+    return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'improved_trim_excerpt');
