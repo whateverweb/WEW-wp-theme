@@ -264,6 +264,12 @@ function cool_excerpt($text)
 }
 add_filter('the_excerpt', 'cool_excerpt');
 
+// custom excerpt
+function custom_excerpt_length( $length ) {
+	return 100;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 if ( ! function_exists( 'twentytwelve_comment' ) ) :
 /**
  * Template for comments and pingbacks.
