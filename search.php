@@ -10,7 +10,10 @@ get_template_part('docs-header'); ?>
 
 <div class="right-side search-results">
     <?php if ( have_posts() ) : ?>
-    	<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+    	
+        <div class="right-side-columns clearfix">
+        	<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+        </div>
         
         <?php while ( have_posts() ) : the_post(); ?>
             <?php //the_title(); ?>
@@ -21,7 +24,9 @@ get_template_part('docs-header'); ?>
         <?php whateverweb_list_nav('post-nav'); ?>
 
     <?php else : ?>
-        <h3><?php echo 'Apologies, we have no recent news to post.'; ?></h3>
+    	<div class="right-side-columns clearfix">
+        	<h3><?php echo 'No search results found.'; ?></h3>
+        </div>
     <?php endif; ?>
 </div>
 
