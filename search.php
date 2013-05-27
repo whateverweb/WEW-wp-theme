@@ -8,7 +8,7 @@ get_template_part('docs-header'); ?>
 	<?php get_template_part('docs-sidebar'); ?>
 </div>
 
-<div class="right-side">
+<div class="right-side search-results">
     <?php if ( have_posts() ) : ?>
     	<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
         

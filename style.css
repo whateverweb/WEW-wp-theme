@@ -459,6 +459,10 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	border: 1px solid #d1d1d1;
 }
 
+.search-results .right-side-columns { 
+	margin-bottom: 1em;
+}
+
 table {
 	border-collapse:collapse;
 }
