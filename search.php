@@ -13,8 +13,10 @@ get_template_part('docs-header'); ?>
     	<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
         
         <?php while ( have_posts() ) : the_post(); ?>
-            <h2><?php the_title(); ?></h2>
-			<br /><?php the_excerpt(); ?>
+            <?php //the_title(); ?>
+            <div class="right-side-columns clearfix">
+				<?php the_excerpt(); ?>
+            </div>
         <?php endwhile; ?>
         <?php whateverweb_list_nav('post-nav'); ?>
 
