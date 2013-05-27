@@ -1030,13 +1030,18 @@ a.tooltip-anchor:hover {
 	margin-top: 1em;
 }
 
+#menu-trigger {
+	visibility: hidden;
+	display: inline-block;
+}
+
 @media screen and (min-width: 8em) and (max-width: 45em) {
 	h2 {
 		font-size: 1.7em;
 	}
 	
 	#menu-trigger {
-		display: inline-block;
+		visivbility: visible;
 	}
 	
 	#top-bar {
@@ -1239,9 +1244,6 @@ a.tooltip-anchor:hover {
 	}
 }
 @media screen and (min-width: 45em) and (max-width: 65em) {
-	#menu-trigger {
-		display: none;
-	}
 	.master-width {
 		width: 720px;
 	}
@@ -1291,24 +1293,15 @@ a.tooltip-anchor:hover {
 	.master-width {
 		width: 960px;
 	}
-	#menu-trigger {
-		display: none;
-	}
 }
 @media screen and (min-width: 90em) and (max-width: 120em) {
 	.master-width {
 		width: 1200px;
-	}
-	#menu-trigger {
-		display: none;
 	}
 }
 
 @media screen and (min-width: 120em) {
 	.master-width {
 		width: 1200px;
-	}
-	#menu-trigger {
-		display: none;
 	}
 }
