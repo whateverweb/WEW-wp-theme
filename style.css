@@ -1030,6 +1030,9 @@ a.tooltip-anchor:hover {
 	margin-top: 1em;
 }
 
+#menu-trigger {
+	display: inline-block;
+}
 
 @media screen and (min-width: 8em) and (max-width: 45em) {
 	h2 {
