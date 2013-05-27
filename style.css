@@ -1030,9 +1030,17 @@ a.tooltip-anchor:hover {
 	margin-top: 1em;
 }
 
+#menu-trigger {
+	display: none;
+}
+
 @media screen and (min-width: 8em) and (max-width: 45em) {
 	h2 {
 		font-size: 1.7em;
+	}
+	
+	#menu-trigger {
+		display: inline-block;
 	}
 	
 	#top-bar {
