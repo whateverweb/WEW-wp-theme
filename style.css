@@ -1032,6 +1032,7 @@ a.tooltip-anchor:hover {
 
 #menu-trigger {
 	display: inline-block;
+	visibility: hidden;
 }
 
 @media screen and (min-width: 8em) and (max-width: 45em) {
