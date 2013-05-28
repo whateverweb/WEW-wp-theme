@@ -1037,6 +1037,18 @@ a.tooltip-anchor:hover {
 #menu-trigger {
 	display: inline-block;
 	visibility: hidden;
+	float: right;
+}
+
+#menu-trigger a {
+	font-size: 3em;
+	text-decoration: none;
+	border: none;
+	color: #333;
+	line-height: 1em;
+	position: relative;
+	top: -2px;
+	cursor: pointer;
 }
 
 @media screen and (min-width: 8em) and (max-width: 45em) {
@@ -1079,7 +1091,7 @@ a.tooltip-anchor:hover {
 	.docs-page .widget_search {
 		float: left;
 		width: 100%;
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 	
 	nav#main-menu {
