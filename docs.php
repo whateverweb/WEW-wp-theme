@@ -5,7 +5,7 @@
  */
 get_template_part('docs-header'); ?>
 
-<div class="left-side"> 
+<div class="left-side" id="left-side-menu"> 
 	<?php get_template_part('docs-sidebar'); ?>
 </div>
 
