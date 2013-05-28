@@ -1045,9 +1045,6 @@ a.tooltip-anchor:hover {
 	text-decoration: none;
 	border: none;
 	color: #333;
-	line-height: 1em;
-	position: relative;
-	top: -2px;
 	cursor: pointer;
 }
 
@@ -1091,7 +1088,7 @@ a.tooltip-anchor:hover {
 	.docs-page .widget_search {
 		float: left;
 		width: 100%;
-		margin-top: 1em;
+		margin-top: .5em;
 	}
 	
 	nav#main-menu {
