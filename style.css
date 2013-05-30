@@ -1019,7 +1019,7 @@ a.tooltip-anchor:hover {
 	cursor: pointer;
 }
 
-.search-excerpt {
+.search-highlight {
 	background:#f95951;
 	color: #FFF !important;
 }

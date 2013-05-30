@@ -304,17 +304,21 @@ function cool_excerpt($text)
 }
 add_filter('the_excerpt', 'cool_excerpt');
 
-function wps_highlight_results($text){
-     if(is_search()){
-		$text = strip_tags($text);
-     	$sr = get_query_var('s');
-     	$keys = explode(" ",$sr);
-     	$text = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">'.$sr.'</span>', $text);
-     }
-     return $text;
+add_filter('the_title','text_highlight');
+add_filter('the_excerpt','text_highlight');
+function text_highlight($text){
+  if(is_search()){
+    global $wp_query; //we need this for the search terms
+    $keys = explode(" ",$wp_query-&gt;query_vars['s']);
+    $text =
+      preg_replace(
+        '/('.implode('|', $keys) .')/iu',
+        '<span class="search-highlight">\0</span>',
+        $text);
+
+  }
+  return $text;
 }
-add_filter('the_excerpt', 'wps_highlight_results');
-add_filter('the_title', 'wps_highlight_results');
 
 function change_wp_search_size($query) {
     if ( $query->is_search )
