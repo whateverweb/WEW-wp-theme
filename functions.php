@@ -296,6 +296,7 @@ function improved_trim_excerpt($text)
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'improved_trim_excerpt');
+add_filter('get_the_old_excerpt', 'wp_trim_excerpt');
 
 //function to replace invalid ellipsis with text linking to the post
 function cool_excerpt($text)
