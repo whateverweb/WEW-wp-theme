@@ -308,21 +308,15 @@ function wps_highlight_results($text){
      if(is_search()){
 		$sr = get_query_var('s');
      	$keys = explode(" ", $sr);
-		
-		$split = $text.explode('<');
-		echo 'split='.$split;
+		$split = explode('<', $text);
 		for($i = 0; $i < count($split); $i++){
-			$temp = $split[$i].explode('>');
-			echo 'temp='.$temp;
+			$temp = explode('>', $split[$i]);
 			for($j = 0; $j < count($keys); $j++){
 				$temp[1] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-excerpt">'.$keys[$j].'</span>', $temp[1]);				
-				echo 'temp1='.$temp[1];
 			}
 			$split[$i] = implode('>', $temp);
-			echo 'tempi='.$split[$i];
 		}
 		$text = implode('<', $split);		
-		
 		
      	//$text = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">'.$sr.'</span>', $text);
      }
