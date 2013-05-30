@@ -306,11 +306,17 @@ add_filter('the_excerpt', 'cool_excerpt');
 
 function wps_highlight_results($text){
      if(is_search()){
-		//$text = strip_tags($text);
-     	$sr = get_query_var('s');
+		$sr = get_query_var('s');
      	$keys = explode(" ",$sr);
-		$patterns = array ('/('.implode('|', $keys) .')/iu', '(?<=^|>)[^><]+?(?=<|$)');		 
-     	$text = preg_replace($patterns, '<span class="search-excerpt">'.$sr.'</span>', $text);
+		
+		$split=$text.explode('<');
+		for($i=0;$i<count($split);$i++){
+			$temp=$split[$i].explode('>');
+			$temp[1] = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">'.$sr.'</span>', $temp[1]);
+			$split[$i]=implode('>',$temp);
+		}
+		$text=implode('<',$split);		
+     	//$text = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">'.$sr.'</span>', $text);
      }
      return $text;
 }
