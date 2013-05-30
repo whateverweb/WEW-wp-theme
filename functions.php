@@ -304,6 +304,13 @@ function cool_excerpt($text)
 }
 add_filter('the_excerpt', 'cool_excerpt');
 
+function change_wp_search_size($query) {
+    if ( $query->is_search )
+        $query->query_vars['posts_per_page'] = 999;
+    return $query;
+}
+add_filter('pre_get_posts', 'change_wp_search_size');
+
 if ( ! function_exists( 'twentytwelve_comment' ) ) :
 /**
  * Template for comments and pingbacks.

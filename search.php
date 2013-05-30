@@ -12,7 +12,7 @@ get_template_part('docs-header'); ?>
     <?php if ( have_posts() ) : ?>
     	
         <div class="right-side-columns clearfix">
-        	<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+        	<h1 class="page-title"><?php printf( __( 'Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
         </div>
         
         <?php while ( have_posts() ) : the_post(); ?>
