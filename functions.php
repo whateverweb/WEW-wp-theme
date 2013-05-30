@@ -310,16 +310,20 @@ function wps_highlight_results($text){
      	$keys = explode(" ", $sr);
 		
 		$split = $text.explode('<');
+		echo 'split='.$split;
 		for($i = 0; $i < count($split); $i++){
 			$temp = $split[$i].explode('>');
+			echo 'temp='.$temp;
 			for($j = 0; $j < count($keys); $j++){
 				$temp[1] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-excerpt">'.$keys[$j].'</span>', $temp[1]);				
+				echo 'temp1='.$temp[1];
 			}
 			$split[$i] = implode('>', $temp);
+			echo 'tempi='.$split[$i];
 		}
 		$text = implode('<', $split);		
 		
-		echo 'text='.$text;
+		
      	//$text = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">'.$sr.'</span>', $text);
      }
      return $text;
