@@ -308,7 +308,10 @@ function wps_highlight_results($text){
      if(is_search()){
 		$sr = get_query_var('s');
      	$keys = explode(" ", $sr);
-		$startWithTag = ($text[0] == '<' ? true : false );
+		$startWithTag = 0;
+		if ($text[0] == '<') {
+			$startWithTag = 1;
+		}
 		$split = explode('<', $text);
 		for($i = 0; $i < count($split); $i++){
 			$temp = explode('>', $split[$i]);
@@ -321,7 +324,7 @@ function wps_highlight_results($text){
 			}
 		}
 		$text = implode('<', $split);
-		if ($startWithTag == true){
+		if ($startWithTag == 1){
 			$text = '<'.$text;	
 		}
 		
