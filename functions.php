@@ -296,7 +296,6 @@ function improved_trim_excerpt($text)
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'improved_trim_excerpt');
-add_filter('get_the_old_excerpt', 'wp_trim_excerpt');
 
 //function to replace invalid ellipsis with text linking to the post
 function cool_excerpt($text)
@@ -304,6 +303,17 @@ function cool_excerpt($text)
    return str_replace('[...]', '... <a href="'. get_permalink($post->ID) . '">' . 'read more' . '</a>', $text);
 }
 add_filter('the_excerpt', 'cool_excerpt');
+
+function wps_highlight_results($text){
+     if(is_search()){
+     $sr = get_query_var('s');
+     $keys = explode(" ",$sr);
+     $text = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">'.$sr.'</strong>', $text);
+     }
+     return $text;
+}
+add_filter('the_excerpt', 'wps_highlight_results');
+add_filter('the_title', 'wps_highlight_results');
 
 function change_wp_search_size($query) {
     if ( $query->is_search )

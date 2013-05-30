@@ -18,9 +18,7 @@ get_template_part('docs-header'); ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <?php //the_title(); ?>
             <div class="right-side-columns clearfix">
-            	<?php $title = get_the_old_excerpt(); $keys= explode(" ",$s); $title = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">\0</strong>', $title); ?>
-				<?php echo $title; ?>
-				<?php //the_excerpt(); ?>
+				<?php the_excerpt(); ?>
             </div>
         <?php endwhile; ?>
         <?php whateverweb_list_nav('post-nav'); ?>
