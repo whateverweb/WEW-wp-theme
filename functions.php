@@ -308,15 +308,22 @@ function wps_highlight_results($text){
      if(is_search()){
 		$sr = get_query_var('s');
      	$keys = explode(" ", $sr);
+		$startWithTag = ($text[0] == '<' ? true : false );
 		$split = explode('<', $text);
 		for($i = 0; $i < count($split); $i++){
 			$temp = explode('>', $split[$i]);
 			for($j = 0; $j < count($keys); $j++){
-				$temp[1] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-excerpt">'.$keys[$j].'</span>', $temp[1]);				
+				$temp[1] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-highlight">'.$keys[$j].'</span>', $temp[1]);				
 			}
 			$split[$i] = implode('>', $temp);
+			if(count($temp) == 1){
+				$split[$i] = $split[$i].'>';
+			}
 		}
-		$text = implode('<', $split);		
+		$text = implode('<', $split);
+		if ($startWithTag == true){
+			$text = '<'.$text;	
+		}
 		
      	//$text = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">'.$sr.'</span>', $text);
      }
