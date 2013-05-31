@@ -307,6 +307,7 @@ add_filter('the_excerpt', 'cool_excerpt');
 function wps_highlight_results($text){
      if(is_search()){
 		$sr = get_query_var('s');
+		echo $sr;
 		if ($sr == ''){
 			return $text;
 		}
