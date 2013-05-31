@@ -319,14 +319,14 @@ function wps_highlight_results($text){
 				$temp[1] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-highlight">'.$keys[$j].'</span>', $temp[1]);				
 			}
 			$split[$i] = implode('>', $temp);
-			if(count($temp) == 1){
+			/*if(count($temp) == 1){
 				$split[$i] = $split[$i].'>';
-			}
+			}*/
 		}
 		$text = implode('<', $split);
-		if ($startWithTag == 1){
+		/*if ($startWithTag == 1){
 			$text = '<'.$text;	
-		}
+		}*/
 		
      	//$text = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">'.$sr.'</span>', $text);
      }
