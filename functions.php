@@ -308,21 +308,22 @@ function wps_highlight_results($text){
      if(is_search()){
 		$sr = get_query_var('s');
      	$keys = explode(" ", $sr);
-		$split = explode('<', $text);
-		for($i = 0; $i < count($split); $i++){
-			$temp = explode('>', $split[$i]);
-			for($j = 0; $j < count($keys); $j++){
-				if (count($temp)>1) {
-					$temp[1] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-highlight">'.$keys[$j].'</span>', $temp[1]);
+		if (count($keys)>0){
+			$split = explode('<', $text);
+			for($i = 0; $i < count($split); $i++){
+				$temp = explode('>', $split[$i]);
+				for($j = 0; $j < count($keys); $j++){
+					if (count($temp)>1) {
+						$temp[1] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-highlight">'.$keys[$j].'</span>', $temp[1]);
+					}
+					else {
+						$temp[0] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-highlight">'.$keys[$j].'</span>', $temp[0]);
+					}
 				}
-				else {
-					$temp[0] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-highlight">'.$keys[$j].'</span>', $temp[0]);
-				}
+				$split[$i] = implode('>', $temp);
 			}
-			$split[$i] = implode('>', $temp);
+			$text = implode('<', $split);
 		}
-		$text = implode('<', $split);
-		
      	//$text = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-excerpt">'.$sr.'</span>', $text);
      }
      return $text;
