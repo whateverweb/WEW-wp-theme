@@ -317,9 +317,11 @@ function wps_highlight_results($text){
 			$temp = explode('>', $split[$i]);
 			for($j = 0; $j < count($keys); $j++){
 				if (count($temp)>1) {
+					$temp[1] = html_entity_decode($temp[1]);
 					$temp[1] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-highlight">'.$keys[$j].'</span>', $temp[1]);
 				}
 				else {
+					$temp[0] = html_entity_decode($temp[0]);
 					$temp[0] = preg_replace('/('.$keys[$j].')/iu', '<span class="search-highlight">'.$keys[$j].'</span>', $temp[0]);
 				}
 			}
