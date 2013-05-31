@@ -9,10 +9,10 @@ get_template_part('docs-header'); ?>
 </div>
 
 <div class="right-side search-results">
-    <?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() && trim(get_search_query()) != '' && trim(get_search_query()) != null ) : ?>
     	
         <div class="right-side-columns clearfix">
-        	<h1 class="page-title"><?php printf( __( 'Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+        	<h1 class="page-title"><?php echo 'Results for: <span>' . get_search_query() . '</span>'; ?></h1>
         </div>
         
         <?php while ( have_posts() ) : the_post(); ?>
