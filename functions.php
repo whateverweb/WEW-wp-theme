@@ -309,7 +309,7 @@ function wps_highlight_results($text){
 		$sr = get_query_var('s');
 		$sr = trim($sr);
 		if ($sr == '' || $sr == null){
-			return $text;
+			return null;
 		}
      	$keys = explode(" ", $sr);		
 		$split = explode('<', $text);
