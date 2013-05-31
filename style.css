@@ -896,6 +896,7 @@ a.tooltip-anchor:hover {
 
 .widget_search div {
 	position: relative;
+	overflow: hidden;
 }
 
 .widget_search .screen-reader-text {
@@ -914,6 +915,9 @@ a.tooltip-anchor:hover {
 	border: 1px solid #D7D7D7;
 	line-height: 1;
 	border-radius: 4px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .widget_search #searchsubmit {
