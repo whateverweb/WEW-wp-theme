@@ -308,7 +308,7 @@ function wps_highlight_results($text){
      if(is_search()){
 		$sr = get_query_var('s');
 		echo $sr;
-		if ($sr == '' || $sr == ' '){
+		if ($sr === '' || $sr === ' '){
 			return $text;
 		}
      	$keys = explode(" ", $sr);		
