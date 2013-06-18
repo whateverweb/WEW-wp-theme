@@ -25,7 +25,7 @@ get_template_part('docs-header'); ?>
 
     <?php else : ?>
     	<div class="right-side-columns clearfix">
-        	<h3><?php echo 'No search results found.'; ?></h3>
+        	<h3><?php echo 'No results found.'; ?></h3>
         </div>
     <?php endif; ?>
 </div>

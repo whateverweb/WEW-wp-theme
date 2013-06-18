@@ -371,6 +371,7 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 .docs-page .right-side h1 {
 	line-height: 1.3em;
 	font-size: 1.5em;
+	margin-bottom: 1em;
 }
 
 .docs-page .right-side h2 {
@@ -391,7 +392,9 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 .docs-page .right-side p {
 	margin-bottom: 1em;
 }
-
+.docs-page .right-side li p {
+	margin-bottom: 0;
+}
 .docs-page .right-side a{
 	font-size: 1em;
 }
@@ -408,6 +411,7 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 
 .docs-page .right-side ol, .docs-page .right-side ul {
 	margin-left: 4em;
+	margin-bottom: 1em;
 }
 
 .docs-page .right-side img {
@@ -427,7 +431,7 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	margin: 0 auto;
 	background: #FFF;
 	border-radius: 4px;
-	padding: 1em 2em;
+	padding: 2em;
 	border: 1px solid #d1d1d1;
 }
 
