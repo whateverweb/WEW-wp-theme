@@ -485,7 +485,7 @@ table th {
 	text-indent: .5em;
 }
 
-#docs-sidebar .current-menu-item a {
+#docs-sidebar .current-menu-item > a {
 	background: #D7F3F3;
 }
 
