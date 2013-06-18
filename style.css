@@ -510,7 +510,8 @@ table th {
 	height: 0;
 }
 
-#docs-sidebar .current-menu-parent .sub-menu {
+#docs-sidebar .current-menu-parent .sub-menu,
+#docs-sidebar .current-menu-item .sub-menu {
 	height: auto;
 }
 
