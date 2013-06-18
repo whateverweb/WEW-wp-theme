@@ -392,6 +392,10 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 .docs-page .right-side p {
 	margin-bottom: 1em;
 }
+.docs-page .right-side p iframe {
+	display:block;
+	margin:2em auto;
+}
 .docs-page .right-side li p {
 	margin-bottom: 0;
 }
@@ -419,15 +423,14 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	padding: .5em;
 	max-width: 100%;
 	height: auto;
-	display: inline-block;
-	margin-right: 2em;
-	margin-bottom: 1em;
 	border-radius: 1em;
 	box-shadow: inset 0 0 1em 0 #BBB;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+	margin: 2em auto;
+	display: block;
 }
 
 .right-side-columns {
