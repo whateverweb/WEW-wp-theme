@@ -506,6 +506,14 @@ table th {
 	padding: .2em 2em;
 }
 
+#docs-sidebar .sub-menu {
+	height: 0;
+}
+
+#docs-sidebar .current-menu-parent .sub-menu {
+	height: auto;
+}
+
 footer, .clear-footer, .clear-content {
 	clear: both;	
 	height: 200px;
