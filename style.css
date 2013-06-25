@@ -1064,6 +1064,14 @@ a.tooltip-anchor:hover {
 	text-transform: capitalize;
 }
 
+h2.search-page-title {
+	color: #999;
+}
+
+h2.search-page-title span {
+	color: #4C4C4C;
+}
+
 @media screen and (min-width: 8em) and (max-width: 45em) {
 	h2 {
 		font-size: 1.7em;
