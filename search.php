@@ -17,7 +17,7 @@ get_template_part('docs-header'); ?>
         
         <?php while ( have_posts() ) : the_post(); ?>
             <div class="right-side-columns clearfix">
-				<h1><a href="<?php the_permalink(); ?>" title="Read more information"><?php the_title(); ?></a></h1>
+				<h1><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h1>
 				<?php the_excerpt(); ?>
             </div>
         <?php endwhile; ?>
