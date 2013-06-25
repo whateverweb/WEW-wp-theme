@@ -13,12 +13,13 @@ get_template_part('docs-header'); ?>
 	<div class="right-side-columns clearfix">
 		<?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
-                <?php the_content(); ?>
+                <h1><?php the_title(); ?></h1>
+				<?php the_content(); ?>
             <?php endwhile; ?>
             <?php whateverweb_list_nav('post-nav'); ?>
     
         <?php else : ?>
-            <h3><?php echo 'Apologies, we have no recent content.'; ?></h3>
+            <h2><?php echo 'We have no recent content.'; ?></h2>
         <?php endif; ?>
     </div>
 </div>
