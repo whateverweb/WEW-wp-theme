@@ -95,9 +95,9 @@ h4, h4 a, h4 a:visited, h4 a:hover {
 	padding: 1em 3em;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	-moz-box-shadow: 0 0px 1px 0 #000;
-	-webkit-box-shadow: 0 0px 1px 0 #000;
-	box-shadow: 0 0px 1px 0 #000;
+	-moz-box-shadow: 0 0px 1px 0 #444;
+	-webkit-box-shadow: 0 0px 1px 0 #444;
+	box-shadow: 0 0px 1px 0 #444;
 }
 
 #page {
@@ -473,9 +473,9 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	background: #FFF;
 	border-radius: 4px;
 	padding: 2em;
-	-moz-box-shadow: 0 0px 1px 0 #000;
-	-webkit-box-shadow: 0 0px 1px 0 #000;
-	box-shadow: 0 0px 1px 0 #000;
+	-moz-box-shadow: 0 0px 1px 0 #444;
+	-webkit-box-shadow: 0 0px 1px 0 #444;
+	box-shadow: 0 0px 1px 0 #444;
 }
 
 .search-results .right-side-columns { 
@@ -513,9 +513,9 @@ table th {
 	background: #FFF;
 	border-radius: 4px;
 	padding: 1em 0;
-	-moz-box-shadow: 0 0px 1px 0 #000;
-	-webkit-box-shadow: 0 0px 1px 0 #000;
-	box-shadow: 0 0px 1px 0 #000;
+	-moz-box-shadow: 0 0px 1px 0 #444;
+	-webkit-box-shadow: 0 0px 1px 0 #444;
+	box-shadow: 0 0px 1px 0 #444;
 }
 
 #docs-sidebar a, #docs-sidebar a:visited {
