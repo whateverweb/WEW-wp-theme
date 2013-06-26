@@ -11,7 +11,7 @@
         		<div id="footer-social">
                 	<a class="footer-github" href="https://github.com/whateverweb" target="_blank">GitHub</a>
                     <a class="footer-twitter" href="https://twitter.com/WhatEverWeb" target="_blank">Twitter</a>
-                    <a class="footer-blog" href="http://docs.whateverweb.com/" target="_blank">Blog</a>
+                    <a class="footer-blog" href="http://docs.whateverweb.com/">Blog</a>
                 </div>
                 <h3>WhateverWeb <span>Let&rsquo;s bring web into the future</span></h3>
                 <p class="footer-menu"><a href="http://whateverweb.com/about.html" class="first">About</a><a href="http://whateverweb.com/getting_started.html">Getting Started</a><a href="http://docs.whateverweb.com/">Blog</a><a href="http://docs.whateverweb.com/introduction/" class="last">Documentation</a></p>
