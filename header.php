@@ -39,21 +39,20 @@
 		                	<nav id="links-menu">
 		                        <ul>
 		                            <li class="first"><a href="http://whateverweb.com/myApplications.html">Dashboard</a></li> 
-		                            <li><a href="http://whateverweb.com/securitySettings.html">My Account</a></li>    
-		                            <li><a href="http://whateverweb.com/statisticsQuotaAccount.html">Account Statistics</a></li>    
+		                            <li><a href="http://whateverweb.com/securitySettings.html">My Account</a></li>   
 		                            <li class="last"><a onClick="myGuardian.logout(); return false;">Logout</a></li>                
 		                        </ul>
 		                    </nav>
 		                </div>
 		                <div id="web-menu">
-		                    <a title="Page Menu" id="web-menu-trigger">≡</a>
+		                    <a title="Page Menu" id="web-menu-trigger">&equiv;</a>
 	                        <nav id="main-menu">
 	                            <ul>
 	                            	<li class="first"><a href="http://whateverweb.com/about.html">About</a></li>
 	                            	<li><a href="http://whateverweb.com/getting_started.html">Getting Started</a></li>	                            	
 	                            	<li><a href="http://whateverweb.com/pricing.html">Pricing</a></li>
 	                                <li><a class="current" href="http://docs.whateverweb.com/">Blog</a></li>
-                                    <li class="last"><a href="http://whateverweb.com/documentation.html">Documentation</a></li>
+                                    <li class="last"><a href="http://docs.whateverweb.com/introduction/">Documentation</a></li>
 	                            </ul>
 	                        </nav>
                         </div>

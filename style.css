@@ -817,7 +817,7 @@ a.tooltip-anchor:hover {
 	max-width: 100%;
 	border-radius: 2px;
 	margin: 1em 0;
-	padding: 5px;
+	padding: 1px;
 	border: 1px solid #DDD;
 }
 
@@ -880,8 +880,7 @@ a.tooltip-anchor:hover {
 	margin: 0;
 	position: relative;
 	top: -0.75em;
-	left: 1em;
-	background: #EEE;
+	background: #F5F5F5;
 	padding: .2em .6em;
 	font-size: 1.3em;
 }
