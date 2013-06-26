@@ -17,7 +17,6 @@
 		<div><?php the_excerpt(); ?></div>
 	<?php else : ?>
 		<div>
-        	<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
         </div>
 	<?php endif; // is_search() ?>
