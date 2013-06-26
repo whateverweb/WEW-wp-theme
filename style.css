@@ -76,13 +76,14 @@ h4, h4 a, h4 a:visited, h4 a:hover {
 }
 
 .docs-section {
-	background: linear-gradient(top, #42B3C5 0%, #F3F3F3 85%);
-	background: -o-linear-gradient(top, #42B3C5 0%, #F3F3F3 85%);
-	background: -moz-linear-gradient(top, #42B3C5 0%, #F3F3F3 85%);
-	background: -webkit-linear-gradient(top, #42B3C5 0%, #F3F3F3 85%);
-	background: -ms-linear-gradient(top, #42B3C5 0%, #F3F3F3 85%);
-	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #42B3C5),color-stop(0.85, #F3F3F3));
+	background: linear-gradient(top, #1db2bf 0%, #F3F3F3 85%);
+	background: -o-linear-gradient(top, #1db2bf 0%, #F3F3F3 85%);
+	background: -moz-linear-gradient(top, #1db2bf 0%, #F3F3F3 85%);
+	background: -webkit-linear-gradient(top, #1db2bf 0%, #F3F3F3 85%);
+	background: -ms-linear-gradient(top, #1db2bf 0%, #F3F3F3 85%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #1db2bf),color-stop(0.85, #F3F3F3));
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	height: 100%;
 }
 
