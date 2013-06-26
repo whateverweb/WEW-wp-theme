@@ -62,7 +62,7 @@
                     <div class="clear"></div>
                 </div>
                 <div id="top-stripe-small">
-                    <div class="master-width clouds-city"></div>
+                    <div class="master-width clouds-city-closeup"></div>
                 </div>
             </header>
 			
