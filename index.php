@@ -6,7 +6,6 @@
 get_header(); ?>
 
 <div class="master-width vspace clearfix">
-	<div class="blog-header"></div>
 	<div class="left-side"> 
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
