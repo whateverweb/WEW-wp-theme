@@ -532,11 +532,13 @@ table th {
 
 #docs-sidebar a:hover {
 	background: #D7F3F3;
+	color: #333 !important;
 	text-indent: .5em;
 }
 
 #docs-sidebar .current-menu-item > a {
 	background: #D7F3F3;
+	color: #333 !important;
 }
 
 #docs-sidebar ul li {
