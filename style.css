@@ -1152,11 +1152,16 @@ h2.search-page-title span {
 		width: 100%;
 		margin-top:0;
 	}
-	
+	.docs-page .right-side ol, .docs-page .right-side ul {
+		margin-left: 1em;
+		margin-bottom: 1em;
+	}
 	.docs-page .right-side {
 		padding: 1em;
 	}
-	
+	.right-side-columns {
+		padding: 1em;
+	}
 	.docs-page #docs-sidebar {
 		margin:1em;		
 	}
