@@ -975,6 +975,7 @@ a.tooltip-anchor:hover {
 .widget_search div {
 	position: relative;
 	overflow: hidden;
+	padding: 2px;
 }
 
 .widget_search .screen-reader-text {
