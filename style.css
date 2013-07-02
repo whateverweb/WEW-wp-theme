@@ -465,6 +465,8 @@ nav#links-menu ul li a:hover, nav#links-menu ul li a.current {
 	transition: all 0.2s ease;
 	margin: 2em auto;
 	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
 .right-side-columns {
