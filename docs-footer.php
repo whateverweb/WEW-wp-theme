@@ -17,7 +17,8 @@
         </footer>
 		
 		<script src="http://whateverweb.com/scripts/whatever.basePackage.js"></script>
-		
+		<script src="http://whateverweb.com/scripts/crossDomainStorage.js"></script>
+        
 		<?php wp_footer(); ?>
     </body>    
 </html>

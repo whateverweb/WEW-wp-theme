@@ -36,6 +36,7 @@
                     <div class="clearfix">                       
                         <h1 class="logo"><a title="WhateverWeb.com" href="http://whateverweb.com/">WhateverWeb</a><span>Beta</span></h1>
                         <div id="menu-trigger"><a title="Main Menu">&equiv;</a></div>
+                        <a class="page-button" onclick="goToSignUp()">SIGN UP</a>
                         <div class="widget_search"><?php get_search_form(); ?></div>
                     </div>
                 </div>                
