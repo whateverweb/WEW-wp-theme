@@ -792,14 +792,19 @@ li.gray-page-button {
 	background: #07818C;
 	border-bottom: 2px solid #055E66;
 	display: inline-block;
-	font-size: 1.35em;
+	font-size: 1.2em;
 	text-decoration: none;
-	line-height: 2.2em;
+	line-height: 2.4em;
 	height: 2.2em;
 	padding: 0 2.2em;
-	margin: 0 0.2em 0;
+	margin: 0.5em 0 0 1em;
 	font-family: arial;
 	cursor: pointer;
+}
+
+.page-button:hover {
+	color: #FFF;
+	background: #097680;
 }
 
 a.tooltip-anchor,
@@ -1023,17 +1028,20 @@ a.tooltip-anchor:hover {
 
 .widget_search #searchsubmit {
 	position: absolute;
-	right: 1px;
-	top: 1px;
-	bottom: 1px;
+	right: 2px;
+	top: 2px;
+	bottom: 2px;
 	background: #EEE;
 	border: none;
 	border-radius: 0 4px 4px 0;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	text-transform: uppercase;
 	font-weight: 700;
 	border-left: 1px solid #CCC;
 	cursor: pointer;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .docs-page .widget_search #s {
@@ -1043,8 +1051,10 @@ a.tooltip-anchor:hover {
 .docs-page .widget_search #searchsubmit {
 	background: #F95951;
 	color: #fff;
-	padding: 0 1em;
+	padding: 0 2em;
 	border-left-color: #F95951;
+	-webkit-appearance: none;
+	font-size: 1.35em;
 }
 
 .widget_ns_mailchimp .error {
