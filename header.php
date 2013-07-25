@@ -49,7 +49,7 @@
 	                        <nav id="main-menu">
 	                            <ul>
 	                            	<li class="first"><a href="http://whateverweb.com/about.html">About</a></li>
-	                            	<li><a href="http://whateverweb.com/getting_started.html">Getting Started</a></li>	                            	
+	                            	<li><a href="http://analyzer.whateverweb.com">Page Analyzer</a></li>	                            	
 	                            	<li><a href="http://whateverweb.com/pricing.html">Pricing</a></li>
 	                                <li><a class="current" href="http://docs.whateverweb.com/">Blog</a></li>
                                     <li class="last"><a href="http://docs.whateverweb.com/introduction/">Documentation</a></li>
