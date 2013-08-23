@@ -35,7 +35,7 @@
                 <div id="top-bar">
                     <div class="clearfix">                       
                         <h1 class="logo"><a title="WhateverWeb.com" href="http://whateverweb.com/">WhateverWeb</a><span>Beta</span></h1>
-                        <a style="float:right" class="page-button" id="sign-up" onclick="goToSignUp()">SIGN UP</a>
+                        <a style="float:right" class="page-button" id="sign-up" onclick="Whatever.CrossDomainStorage.goToSignUp()">SIGN UP</a>
                         <div id="menu-trigger"><a title="Main Menu">&equiv;</a></div>                        
                         <div class="widget_search"><?php get_search_form(); ?></div>
                     </div>
