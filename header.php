@@ -38,9 +38,9 @@
 	                        <a title="Go to Administration" id="admin-menu-trigger">Admin</a>                        
 		                	<nav id="links-menu">
 		                        <ul>
-		                            <li class="first"><a href="http://whateverweb.com/myApplications.html">Dashboard</a></li> 
-		                            <li><a href="http://whateverweb.com/securitySettings.html">My Account</a></li>   
-		                            <li class="last"><a onClick="myGuardian.logout(); return false;">Logout</a></li>                
+		                            <li class="first"><a href="http://whateverweb.com/myProjects.html">Dashboard</a></li> 
+		                            <li><a href="http://whateverweb.com/statisticsQuotaAccount.html">My Account</a></li>   
+		                            <li class="last"><a onClick="Whatever.Guardian.logout(); return false;">Logout</a></li>                
 		                        </ul>
 		                    </nav>
 		                </div>
@@ -56,7 +56,7 @@
 	                            </ul>
 	                        </nav>
                         </div>
-                         <h1 class="logo"><a title="WhateverWeb.com" href="http://whateverweb.com/">WhateverWeb</a><span>Beta</span></h1>
+                         <h1 class="logo"><a title="WhateverWeb.com" href="http://whateverweb.com">WhateverWeb</a><span>Beta</span></h1>
                     </div>
                     <div class="clear"></div>
                 </div>
