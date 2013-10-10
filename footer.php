@@ -14,7 +14,7 @@
                     <a class="footer-blog" href="http://docs.whateverweb.com/">Blog</a>
                 </div>
                 <h3>WhateverWeb <span>Let&rsquo;s bring web into the future</span></h3>
-                <p class="footer-menu"><a href="http://whateverweb.com/about.html" class="first">About</a><a href="http://analyzer.whateverweb.com">Page Analyzer</a><a href="http://docs.whateverweb.com/">Blog</a><a href="http://docs.whateverweb.com/introduction/" class="last">Documentation</a></p>
+                <p class="footer-menu"><a href="http://whateverweb.com/about.html" class="first">About</a><a href="http://docs.whateverweb.com/">Blog</a><a href="http://docs.whateverweb.com/introduction/" class="last">Documentation</a></p>
                 <p class="footer-menu"><a href="http://whateverweb.com/terms.html" class="first">Terms of Service</a><a href="http://whateverweb.com/privacy.html">Privacy Policy</a><a href="mailto:team@whateverweb.com" class="last">Support</a>
                 </p><p>Copyright &copy; 2013-2014 WhateverWeb.com<br>Brought to you by Mobiletech</p>                
             </div>            
